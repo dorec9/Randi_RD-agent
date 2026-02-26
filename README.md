@@ -2,7 +2,6 @@
 
 본 문서는 `Randi_RD-agent` 저장소의 실제 코드 파일을 기준으로 작성했습니다.
 
-- Monorepo: https://github.com/dorec9/Randi_RD-agent
 - 작성 기준 디렉터리: `backend/`, `frontend/`, `modeling/`, `scripts/`, `tools/`
 
 ## 1) 프로젝트 개요
