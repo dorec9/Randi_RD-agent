@@ -1,0 +1,60 @@
+# Global
+.DS_Store
+Thumbs.db
+*.log
+logs/
+*.tmp
+*.bak
+*.swp
+
+# Secrets / local env
+.env
+*.env
+.env.*
+**/.env
+**/*.env
+**/application-local.yml
+**/application-local.yaml
+**/application-dev.yml
+**/application-dev.yaml
+**/application-prod.yml
+**/application-prod.yaml
+**/application-secret.yml
+**/application-secret.yaml
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# Java / Gradle
+**/.gradle/
+**/build/
+**/out/
+**/bin/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Node
+**/node_modules/
+**/dist/
+**/dist-ssr/
+**/*.local
+
+# Python
+**/__pycache__/
+**/*.pyc
+**/.venv/
+**/venv/
+
+# Data and model outputs
+modeling/data/
+modeling/output/
+modeling/*.png
+modeling/*.pptx
+modeling/full_dist_cache.json
+modeling/analysis_cache.json
+modeling/debug_analysis_result.json
+modeling/features/ppt_maker/nodes_code/test_outputs/

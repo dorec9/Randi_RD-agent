@@ -1,0 +1,95 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL:}
+    username: ${DB_USERNAME:}
+    password: ${DB_PASSWORD:}
+
+  jpa:
+    hibernate:
+      # DB와 엔티티 구조가 일치하는지 검사만 수행
+      ddl-auto: validate
+
+      # [중요] 자바 필드명 대소문자 그대로 DB 컬럼명을 찾게 하는 설정
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+
+  # =========================
+  # [필수] 대용량 파일 업로드 설정 (추가됨)
+  # =========================
+  servlet:
+    multipart:
+      max-file-size: 1GB       # 파일 1개당 최대 1GB
+      max-request-size: 1GB    # 요청 전체 최대 1GB
+
+  # =========================
+  # Redis 설정 (들여쓰기 수정됨)
+  # =========================
+  data:
+    redis:
+      host: ${REDIS_HOST:}
+      port: ${REDIS_PORT:}
+      timeout: ${REDIS_TIMEOUT:}
+
+  # =========================
+  # 이메일 설정 (들여쓰기 수정됨)
+  # =========================
+  mail:
+    host: ${MAIL_HOST:}
+    port: ${MAIL_PORT:}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+# =========================
+# FastAPI 연동 (추가)
+# =========================
+fastapi:
+  base-url: ${FASTAPI_BASE_URL:}
+
+# =========================
+# JWT 설정
+# =========================
+jwt:
+  secret: ${JWT_SECRET:}
+  token-valid-time-ms: ${JWT_TOKEN_VALID_TIME_MS:}
+# =========================
+# 서버 설정 (타임아웃 & 에러)
+# =========================
+server:
+  # 대용량 처리를 위한 타임아웃 (10분)
+  tomcat:
+    connection-timeout: 600000
+    keep-alive-timeout: 600000
+    max-swallow-size: -1
+
+  error:
+    include-message: always
+    include-binding-errors: always
+
+# =========================
+# 이메일 인증(Redis) 정책
+# =========================
+auth:
+  email:
+    code-ttl-seconds: 300
+    verified-ttl-seconds: 3600
+    max-attempts: 5
+  invite:
+    ttl-seconds: 86400
+    base-url: ${INVITE_BASE_URL:}
+
+bizinfo:
+  api:
+    key: ${BIZINFO_API_KEY:}
+    url: ${BIZINFO_API_URL:}

@@ -1,0 +1,93 @@
+.footer {
+  width: 100%;
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  border-top: 1px solid var(--color-border-light);
+  background: white;
+  margin-top: auto;
+  box-sizing: border-box;
+}
+
+/* Common Section */
+.footer-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* System Name */
+.footer-system-name {
+  font-weight: var(--font-weight-semibold);
+  font-size: 16px;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+/* Policy Links Section */
+.footer-policy {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.footer-policy button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-text-tertiary);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  transition: color var(--transition-fast);
+}
+
+.footer-policy button:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* Menu Links Section */
+.footer-menu {
+  display: flex;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.footer-menu button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  transition: color var(--transition-fast);
+}
+
+.footer-menu button:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* Version Info */
+.footer-version {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-regular);
+}
+
+/* Notice Text */
+.footer-notice {
+  margin-top: var(--spacing-lg);
+  font-size: 13px;
+  color: var(--color-text-tertiary);
+  line-height: 1.5;
+}
+
+/* Copyright */
+.footer-copy {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border-light);
+  font-size: 13px;
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-regular);
+}
