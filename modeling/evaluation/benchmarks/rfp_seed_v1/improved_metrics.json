@@ -1,0 +1,29 @@
+{
+  "benchmark": "rfp_seed_v1",
+  "evaluated_at": "2026-07-24",
+  "query_count": 4,
+  "reranker": {
+    "candidate_multiplier": 3,
+    "title_rerank_weight": 0.35,
+    "ministry_boost": 0.0,
+    "document_deduplication": "highest final score per doc_id"
+  },
+  "strict_grade_2": {
+    "mrr": 0.8125,
+    "precision@5": 0.55,
+    "recall@5": 1.0,
+    "ndcg@5": 0.8599528215638588,
+    "precision@10": 0.275,
+    "recall@10": 1.0,
+    "ndcg@10": 0.8953364124097707
+  },
+  "delta_vs_baseline": {
+    "mrr": 0.16666666666666663,
+    "precision@5": 0.15000000000000002,
+    "recall@5": 0.21666666666666667,
+    "ndcg@5": 0.14278179765215226,
+    "precision@10": 0.0,
+    "recall@10": 0.0,
+    "ndcg@10": 0.06565343918537858
+  }
+}

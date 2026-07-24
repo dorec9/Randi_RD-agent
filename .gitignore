@@ -50,8 +50,11 @@ logs/
 **/venv/
 
 # Data and model outputs
+.local-data/
 modeling/data/
 modeling/output/
+modeling/evaluation/data/
+modeling/evaluation/output/
 modeling/*.png
 modeling/*.pptx
 modeling/full_dist_cache.json
