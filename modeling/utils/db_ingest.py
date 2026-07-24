@@ -32,9 +32,25 @@ def main():
     print(f"[*] 원본 데이터: {jsonl_path}")
     print(f"[*] 임베딩 모델: {EMBED_MODEL_NAME}")
 
-    # 2. DB 연결 (없으면 생성됨)
+    # 2. DB 연결 (없으면 cosine 컬렉션 생성)
     client = chromadb.PersistentClient(path=chroma_dir)
-    collection = client.get_or_create_collection(name=collection_name)
+    try:
+        collection = client.get_collection(name=collection_name)
+    except Exception:
+        collection = client.create_collection(
+            name=collection_name,
+            metadata={"hnsw:space": "cosine"},
+        )
+    else:
+        # HNSW distance cannot be changed after collection creation. Refuse to
+        # append to an old/default-L2 collection because vector_db.py interprets
+        # its distances as cosine similarity.
+        distance_space = (collection.metadata or {}).get("hnsw:space")
+        if distance_space != "cosine":
+            raise RuntimeError(
+                f"Collection '{collection_name}' is not a verified cosine index. "
+                "Rebuild it in an empty CHROMA_DB_DIR before ingesting data."
+            )
     
     # 3. 모델 로딩
     print("[*] 모델 로딩 중...")

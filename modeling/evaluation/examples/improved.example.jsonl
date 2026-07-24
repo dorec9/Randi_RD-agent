@@ -1,0 +1,2 @@
+{"query_id":"q001","results":[{"doc_id":"doc-ocean","score":88.1},{"doc_id":"doc-climate","score":83.2},{"doc_id":"doc-other","score":70.0}]}
+{"query_id":"q002","results":[{"doc_id":"doc-carbon","score":86.4},{"doc_id":"doc-other","score":71.0}]}

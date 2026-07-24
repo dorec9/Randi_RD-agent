@@ -1,0 +1,53 @@
+{
+  "evaluated_at": "2026-07-24",
+  "query_count": 30,
+  "agency_count": 16,
+  "binary_threshold": 2,
+  "configuration": {
+    "model": "intfloat/multilingual-e5-base",
+    "distance": "cosine",
+    "candidate_multiplier": 10,
+    "title_rerank_weight": 0.35,
+    "lexical_rerank_weight": 0.05,
+    "lexical_max_query_chars": 120,
+    "ministry_boost": 0.0
+  },
+  "baseline": {
+    "success_at_1": 0.5666666666666667,
+    "success_at_5": 0.7666666666666667,
+    "success_at_10": 0.8333333333333334,
+    "mrr": 0.6664285714285715,
+    "ndcg_at_5": 0.686177510864356,
+    "ndcg_at_10": 0.7069241161860634
+  },
+  "improved": {
+    "success_at_1": 0.7666666666666667,
+    "success_at_5": 1.0,
+    "success_at_10": 1.0,
+    "mrr": 0.8733333333333333,
+    "ndcg_at_5": 0.9057477109554429,
+    "ndcg_at_10": 0.9057477109554429
+  },
+  "paired_bootstrap_95_percent": {
+    "samples": 10000,
+    "seed": 42,
+    "success_at_5_delta": {
+      "mean": 0.23333333333333334,
+      "low": 0.1,
+      "high": 0.4,
+      "probability_improved": 0.9998
+    },
+    "mrr_delta": {
+      "mean": 0.2069047619047619,
+      "low": 0.06857142857142857,
+      "high": 0.3469047619047619,
+      "probability_improved": 0.9982
+    },
+    "ndcg_at_5_delta": {
+      "mean": 0.21957020009108685,
+      "low": 0.08623686675775354,
+      "high": 0.36182917212406196,
+      "probability_improved": 0.9996
+    }
+  }
+}

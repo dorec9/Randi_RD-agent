@@ -1,0 +1,30 @@
+{"query_id":"holdout-q001","query_text":"대화·영상·자율주행 데이터에서 개인정보를 탐지하고 비식별화하는 기술을 개발하는 사업을 찾아줘.","ministry_name":"개인정보보호위원회","notes":"개인정보 탐지 및 비식별화"}
+{"query_id":"holdout-q002","query_text":"경찰관의 의료·건강 데이터를 통합해 만성질환을 예측하고 맞춤형 건강관리를 제공하는 연구사업을 찾아줘.","ministry_name":"경찰청","notes":"경찰관 맞춤 건강관리"}
+{"query_id":"holdout-q003","query_text":"저전력 AI 반도체를 활용해 데이터센터의 연산 성능과 에너지 효율을 높이는 기술개발 사업을 찾아줘.","ministry_name":"과학기술정보통신부","notes":"AI 반도체 데이터센터"}
+{"query_id":"holdout-q004","query_text":"국내 기후기술의 해외 실증과 국제 공동연구를 지원하는 사업을 찾아줘.","ministry_name":"과학기술정보통신부","notes":"기후기술 국제협력"}
+{"query_id":"holdout-q005","query_text":"데이터 신뢰성과 유통 이력을 보장하기 위한 블록체인 원천기술 연구사업을 찾아줘.","ministry_name":"과학기술정보통신부","notes":"블록체인 데이터 경제"}
+{"query_id":"holdout-q006","query_text":"여러 환경을 인지하고 스스로 판단해 행동하는 지능형 소프트웨어 에이전트 기술개발 사업을 찾아줘.","ministry_name":"과학기술정보통신부","notes":"자율행동 지능 SW"}
+{"query_id":"holdout-q007","query_text":"생성형 인공지능 분야의 석박사급 연구인력과 산업 현장 인재를 양성하는 사업을 찾아줘.","ministry_name":"과학기술정보통신부","notes":"생성형 AI 인재"}
+{"query_id":"holdout-q008","query_text":"로봇과 인공지능으로 항공기 결함을 진단하고 검사·정비를 자동화하는 연구사업을 찾아줘.","ministry_name":"국토교통부","notes":"항공기 로봇 검사"}
+{"query_id":"holdout-q009","query_text":"노후 건축물의 위험 징후를 광역 단위로 상시 감시하는 디지털 안전관리 기술사업을 찾아줘.","ministry_name":"국토교통부","notes":"노후 건축물 안전 감시"}
+{"query_id":"holdout-q010","query_text":"GTX 같은 깊고 긴 지하터널에서 화재와 재난에 대응할 수 있는 복합훈련 시설 개발사업을 찾아줘.","ministry_name":"국토교통부","notes":"대심도 터널 재난 훈련"}
+{"query_id":"holdout-q011","query_text":"위성영상과 공간 빅데이터를 이용해 국토 변화를 관측하고 관리하는 기술개발 사업을 찾아줘.","ministry_name":"국토교통부","notes":"위성정보 국토관리"}
+{"query_id":"holdout-q012","query_text":"구제역이나 조류인플루엔자처럼 피해가 큰 가축 감염병의 진단·예방·방역 기술사업을 찾아줘.","ministry_name":"농림축산식품부","notes":"고위험 동물 감염병"}
+{"query_id":"holdout-q013","query_text":"그린수소를 생산·저장해 온실과 축사 등 농업시설에 에너지를 공급하는 실증사업을 찾아줘.","ministry_name":"농촌진흥청","notes":"그린수소 농업 에너지"}
+{"query_id":"holdout-q014","query_text":"공연장의 사고 위험을 인공지능으로 예측하고 관객과 작업자의 안전을 관리하는 기술사업을 찾아줘.","ministry_name":"문화체육관광부","notes":"공연예술 AI 안전"}
+{"query_id":"holdout-q015","query_text":"응급실 환자의 중증도와 임상 의사결정을 인공지능으로 지원하는 시스템 개발사업을 찾아줘.","ministry_name":"보건복지부","notes":"응급실 AI 임상지원"}
+{"query_id":"holdout-q016","query_text":"산불·산사태·산림병해충 같은 산림 재난의 현장 문제를 해결하는 연구개발 사업을 찾아줘.","ministry_name":"산림청","notes":"산림 재난 현안 해결"}
+{"query_id":"holdout-q017","query_text":"개발된 로봇을 실제와 유사한 환경에서 시험하고 성능과 안전성을 검증할 수 있는 국가 실증 기반 사업을 찾아줘.","ministry_name":"산업통상자원부","notes":"로봇 시험 실증 기반"}
+{"query_id":"holdout-q018","query_text":"분산된 예비전력 설비의 상태와 위험을 AI로 통합 감시하고 안전하게 운영하는 플랫폼 사업을 찾아줘.","ministry_name":"산업통상자원부","notes":"분산전력 AI 안전관리"}
+{"query_id":"holdout-q019","query_text":"유통과 물류 전 과정을 디지털화하고 자동화 기술의 현장 실증을 지원하는 사업을 찾아줘.","ministry_name":"산업통상자원부","notes":"디지털 유통 물류"}
+{"query_id":"holdout-q020","query_text":"태양광·풍력 등 재생에너지 발전과 전력계통 연계를 고도화하는 핵심기술 사업을 찾아줘.","ministry_name":"산업통상자원부","notes":"재생에너지 전력 기술"}
+{"query_id":"holdout-q021","query_text":"국내에서 만든 전자 소자와 부품을 실제 우주환경에서 시험·검증하도록 지원하는 사업을 찾아줘.","ministry_name":"우주항공청","notes":"국산 부품 우주 검증"}
+{"query_id":"holdout-q022","query_text":"우주 쓰레기나 위험 물체의 궤도를 바꾸거나 제거하기 위한 능동 제어 선행기술 사업을 찾아줘.","ministry_name":"우주항공청","notes":"우주물체 능동 제어"}
+{"query_id":"holdout-q023","query_text":"중소기업 업종별로 탄소 배출을 줄이는 공정과 사업모델을 개발하고 확산하는 사업을 찾아줘.","ministry_name":"중소벤처기업부","notes":"중소기업 탄소중립 모델"}
+{"query_id":"holdout-q024","query_text":"신종·재출현 감염병의 감시, 예측, 진단과 방역 역량을 높이는 공공 연구사업을 찾아줘.","ministry_name":"질병관리청","notes":"감염병 관리기술"}
+{"query_id":"holdout-q025","query_text":"바다에 떠다니는 쓰레기를 수거하고 선상에서 친환경적으로 처리하는 선박 실증사업을 찾아줘.","ministry_name":"산업통상자원부","notes":"해양 부유쓰레기 처리선"}
+{"query_id":"holdout-q026","query_text":"도시의 폭염·집중호우·미세기상 문제를 관측하고 예측하는 기상기후 융합기술 사업을 찾아줘.","ministry_name":"기상청","notes":"스마트도시 기상기후"}
+{"query_id":"holdout-q027","query_text":"기후변화로 훼손될 위험이 있는 문화유산을 진단하고 보존하는 기술개발 사업을 찾아줘.","ministry_name":"국가유산청","notes":"기후변화 문화유산 보존"}
+{"query_id":"holdout-q028","query_text":"지역별 탄소 배출과 흡수량을 공간정보로 시각화해 도시·국토계획을 지원하는 기술사업을 찾아줘.","ministry_name":"국토교통부","notes":"탄소 공간지도 계획지원"}
+{"query_id":"holdout-q029","query_text":"노지 농작물의 생육·환경 데이터를 수집하고 자동 농작업과 정밀 관리를 고도화하는 사업을 찾아줘.","ministry_name":"농촌진흥청","notes":"노지 디지털 농업"}
+{"query_id":"holdout-q030","query_text":"감염병 위기 시 의약품과 의료기기의 안전성·성능 평가기술을 신속히 지원하는 연구사업을 찾아줘.","ministry_name":"식품의약품안전처","notes":"감염병 대응 제품 평가"}

@@ -1,0 +1,33 @@
+{
+  "benchmark": "rfp_seed_v1",
+  "evaluated_at": "2026-07-24",
+  "query_count": 4,
+  "corpus": {
+    "chunks": 2204,
+    "documents": 1620,
+    "source_md5": "02FCD5397E7E953FEB0320F837B1CFF7"
+  },
+  "retriever": {
+    "embedding_model": "intfloat/multilingual-e5-base",
+    "distance": "cosine",
+    "document_deduplication": "highest-scoring chunk per doc_id"
+  },
+  "strict_grade_2": {
+    "mrr": 0.6458333333333334,
+    "precision@5": 0.4,
+    "recall@5": 0.7833333333333333,
+    "ndcg@5": 0.7171710239117065,
+    "precision@10": 0.275,
+    "recall@10": 1.0,
+    "ndcg@10": 0.8296829732243921
+  },
+  "inclusive_grade_1": {
+    "mrr": 1.0,
+    "precision@5": 0.8,
+    "recall@5": 0.6166666666666667,
+    "ndcg@5": 0.7171710239117065,
+    "precision@10": 0.675,
+    "recall@10": 1.0,
+    "ndcg@10": 0.8296829732243921
+  }
+}
