@@ -9,6 +9,7 @@
 - 목적: R&D 공고 분석, 유사 RFP 탐색, 발표자료(PPT) 생성, 발표 스크립트/Q&A 생성 자동화
 - 형태: Spring Boot + React + FastAPI + ChromaDB 기반 멀티 서비스
 - 담당 역할(명시): 모델링 파트(2, 4) 및 배포 구성
+- 검색 품질 측정과 개선: [`modeling/evaluation/`](modeling/evaluation/) — 아래 5-5 참고
 
 ## 2) 저장소 구조
 ```text
@@ -116,6 +117,34 @@ Randi_RD-agent/
 ### 5-4. `features/ppt_script`
 - PPT에서 슬라이드별 텍스트 추출
 - 발표 대본 + 예상 Q&A JSON 생성
+
+### 5-5. `evaluation` — 검색 품질 측정과 개선
+
+유사 RFP 검색이 실제로 관련 문서를 상위에 올리는지 확인할 방법이 없어, 평가셋부터 만들고 개선했습니다.
+
+- 평가셋: 질의 30개와 정답 문서를 라벨링한 홀드아웃 (`benchmarks/rfp_holdout_v2/`)
+- 코퍼스: 문서 1,620개 / 청크 2,204개, 기관 16곳, 임베딩 `intfloat/multilingual-e5-base`, 거리 cosine
+- 평가 단위: 청크가 아닌 `doc_id`. 같은 문서의 여러 청크는 최고 점수 하나만 남깁니다.
+
+| 지표 | 기존 | 개선 | 변화 |
+|---|---:|---:|---:|
+| Success@1 | 56.7% | 76.7% | +20.0%p |
+| Success@5 | 76.7% | **100.0%** | +23.3%p |
+| MRR | 0.6664 | **0.8733** | +0.2069 |
+| nDCG@5 | 0.6862 | **0.9057** | +0.2196 |
+
+개선 방식은 후보를 10배로 넓게 검색한 뒤 본문 점수와 제목 의미 점수를 결합하고, 같은 문서의 청크를 병합하는
+재정렬입니다. 120자 이하의 짧은 질의에는 관리 문자열과 표기 차이를 정규화한 제목 어휘 점수를 5% 더합니다.
+
+개선 폭이 우연인지 확인하기 위해 30개 질의의 기존·개선 결과를 짝지어 10,000회 percentile bootstrap으로
+재표본화했습니다. Success@5는 95% 신뢰구간 `+10.0%p ~ +40.0%p`, MRR은 `+0.0686 ~ +0.3469`로
+세 핵심 지표 모두 하한이 0보다 컸습니다.
+
+**한계.** 위 100%는 이 고정 평가셋 30건에서의 수치이고 모든 사용자 질의에 대한 보장이 아닙니다.
+정답 라벨을 단독으로 매겨 두 번째 판정자의 교차 검토가 빠져 있습니다.
+
+실행 방법과 데이터 준비 절차는 [`modeling/evaluation/README.md`](modeling/evaluation/README.md),
+원자료는 [`benchmarks/rfp_holdout_v2/results.md`](modeling/evaluation/benchmarks/rfp_holdout_v2/results.md)에 있습니다.
 
 ## 6) 기술 스택
 - Backend: Java 17, Spring Boot 3.5, Spring Security, JPA, WebFlux, MySQL, Redis
